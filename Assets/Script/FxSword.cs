@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FxSword : MonoBehaviour
+{
+    private int damage = 10; // …À∫¶÷µ
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Boss"))
+        {
+            Debug.Log("Boss≈ˆ◊≤FX2£¨‘Ï≥……À∫¶ = " + damage);
+        }
+    }
+    public void SetDamage(int damage)
+    {
+        this.damage = damage; // …Ë÷√…À∫¶÷µ
+    }
+}
