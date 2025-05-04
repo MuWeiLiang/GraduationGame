@@ -9,10 +9,14 @@ public class LevelBaseData : MonoBehaviour
 
     public int LevelMode = 0;
     public int currentLevel = 0;
+    public int NextLevel = 7;
+    public int NextSLevel = 3;
     public int[] LevelCoin;
     public int[] LevelGoal;
     public float[][] LevelCamera;
     public float[][] SLevelCamera;
+
+    public ElementType elementType;
 
     public bool isComplete = false;
     public float timeUsed = 137f, timeAll = 180f;
@@ -34,6 +38,15 @@ public class LevelBaseData : MonoBehaviour
         InitLevelMode();
         InitLevelData();
         InitEvalutionData();
+
+        elementType = ElementType.Fire;
+    }
+
+    private void Start()
+    {
+        GameSaveData loadedData = SaveSystem.LoadGame();
+        NextLevel = loadedData.currentLevel;
+        NextSLevel = loadedData.currentSLevel;
     }
 
     private void InitLevelMode()
@@ -93,5 +106,34 @@ public class LevelBaseData : MonoBehaviour
         timeUsed = timeAll - timeRemain;
         this.score = score;
         this.status = status;
+        if(isComplete)
+        {
+            if (LevelMode == 0)
+            {
+                if(currentLevel + 1 > NextLevel)
+                {
+                    NextLevel = currentLevel + 1;
+                    GameSaveData loadedData = SaveSystem.LoadGame();
+                    if (loadedData != null) {
+                        loadedData.currentLevel = NextLevel;
+                        loadedData.levelUnlocked[NextLevel - 1] = true;
+                        SaveSystem.SaveGame(loadedData);
+                    }
+                }
+            }
+            else if (LevelMode == 1)
+            {
+                if(currentLevel + 1 > NextSLevel)
+                {
+                    NextSLevel = currentLevel + 1;
+                    GameSaveData loadedData = SaveSystem.LoadGame();
+                    if (loadedData != null) { 
+                        loadedData.currentSLevel = NextSLevel;
+                        loadedData.SlevelUnlocked[NextSLevel - 1] = true;
+                        SaveSystem.SaveGame(loadedData);
+                    }
+                }
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ public class SPlayerController : MonoBehaviour
     private PlayerFight playerFight;
     private PlayerStatus playerStatus;
     private PlayerUI playerUI;
-    private PlayerSkill playerSkill;
+    //private PlayerSkill playerSkill;
 
     private int LevelMode = 0; // 0: normal, 1: boss, 2: other
 
@@ -53,11 +53,11 @@ public class SPlayerController : MonoBehaviour
         playerStatus.Initialize(this, spriteEffectController);
         playerUI = new PlayerUI();
         playerUI.Initialize(playerBase);
-        if (LevelMode == 1)
-        {
-            playerSkill = new PlayerSkill();
-            playerSkill.Initialize(playerBase, playerMove, playerStatus, this, onPlayer);
-        }
+        //if (LevelMode == 1)
+        //{
+        //    playerSkill = new PlayerSkill();
+        //    playerSkill.Initialize(playerBase, playerMove, playerStatus, this, onPlayer);
+        //}
 
     }
 
@@ -81,11 +81,11 @@ public class SPlayerController : MonoBehaviour
             {
                 playerMove.Tick();
                 playerFight.Tick();
-                if (LevelMode == 1)
-                    playerSkill.Tick1();
+                //if (LevelMode == 1)
+                //    playerSkill.Tick1();
             }
-            if (LevelMode == 1)
-                playerSkill.Tick2();
+            //if (LevelMode == 1)
+            //    playerSkill.Tick2();
         }
         else
         {

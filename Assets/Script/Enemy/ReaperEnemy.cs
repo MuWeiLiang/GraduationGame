@@ -35,6 +35,8 @@ public class ReaperEnemy : RandomMove
         StartMove();
         // player = GameObject.FindGameObjectWithTag("Player");
         health = 50; // ³õÊ¼»¯ÑªÁ¿
+
+        damagePopupSystem = FindObjectOfType<DamagePopupSystem>();
     }
 
     void Update()

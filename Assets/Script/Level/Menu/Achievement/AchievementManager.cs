@@ -8,6 +8,7 @@ public class AchievementManager : MonoBehaviour
     [SerializeField] private GameObject achievementPrefab;
     [SerializeField] private Transform contentParent;
     string[] GradData = null;
+    string[] SGradData = null;
 
     void Start()
     {
@@ -34,6 +35,18 @@ public class AchievementManager : MonoBehaviour
             GameObject item = Instantiate(achievementPrefab, contentParent);
             AchievementItem controller = item.GetComponent<AchievementItem>();
             controller.Initialize(i + 1, data, allSprites[Index]);
+        }
+        for(int i = 0;i < SGradData.Length; i++)
+        {
+            var data = SGradData[i];
+            if (data != "S" && data != "A" && data != "B") continue;
+            int Index = 55;
+            if (data == "B") Index = 15;
+            if (data == "A") Index = 89;
+            GameObject item = Instantiate(achievementPrefab, contentParent);
+            AchievementItem controller = item.GetComponent<AchievementItem>();
+            controller.Initialize(i + 1, data, allSprites[Index]);
+            controller.SetSText();
         }
     }
 
@@ -78,11 +91,48 @@ public class AchievementManager : MonoBehaviour
             Debug.LogError("加载游戏数据失败，无法保存成绩。");
         }
     }
-    
+    public void SaveSLevelGrade(string levelName, string grade)
+    {
+        GameSaveData loadedData = SaveSystem.LoadGame();
+        if (loadedData != null)
+        {
+            int levelIndex = int.Parse(levelName.Substring(levelName.Length - 1)) - 1;
+
+            // 检查索引有效性
+            if (levelIndex < 0 || levelIndex >= loadedData.SlevelGrade.Length)
+            {
+                Debug.LogError($"无效的关卡索引: {levelIndex}");
+                return;
+            }
+
+            // 获取旧成绩和新成绩的排序值
+            string oldGrade = loadedData.SlevelGrade[levelIndex];
+            int oldScore = GradeOrder.TryGetValue(oldGrade.ToUpper(), out var o) ? o : int.MaxValue;
+            int newScore = GradeOrder.TryGetValue(grade.ToUpper(), out var n) ? n : int.MaxValue;
+
+            // 仅在新成绩更好时更新（数值更小）
+            if (newScore < oldScore)
+            {
+                loadedData.SlevelGrade[levelIndex] = grade.ToUpper();
+                SaveSystem.SaveGame(loadedData);
+                Debug.Log($"更新成绩：{levelName} {oldGrade}->{grade}");
+            }
+            else
+            {
+                Debug.Log($"保持原成绩：{levelName} {oldGrade}（新成绩{grade}不优于旧成绩）");
+            }
+        }
+        else
+        {
+            Debug.LogError("加载游戏数据失败，无法保存成绩。");
+        }
+    }
+
     private void LoadAchievements()
     {
         // 这里可以添加从文件或数据库加载的逻辑
         GameSaveData loadedData = SaveSystem.LoadGame();
         GradData = loadedData.levelGrade;
+        SGradData = loadedData.SlevelGrade;
     }
 }

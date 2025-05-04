@@ -86,6 +86,8 @@ public class SLevelManager : MonoBehaviour
     public void AddScore(int amount)
     {
         levelData.AddScore(amount);
+        //ActivePrompt("Press F");
+        ShowScore(amount);
         UpdateLevelScore(levelData.GetScore());
     }
     public bool IsGoalScoreReached() => levelData.IsGoalScoreReached();
@@ -113,7 +115,20 @@ public class SLevelManager : MonoBehaviour
         {
             Debug.LogError("LogText not found!");
         }
-        Invoke("DeactivePrompt", 1.5f); // 1.5秒后自动关闭提示
+        Invoke("DeactivePrompt", 1f); // 1.5秒后自动关闭提示
+    }
+    public void ShowScore(int score)
+    {
+        Prompt.SetActive(true);
+        if (LogText != null)
+        {
+            LogText.text = "+" + score;
+        }
+        else
+        {
+            Debug.LogError("LogText not found!");
+        }
+        Invoke("DeactivePrompt", 1f); // 1.5秒后自动关闭提示
     }
     public void DeactivePrompt()
     {

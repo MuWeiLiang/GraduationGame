@@ -19,7 +19,7 @@ public class WaterSkill2 : SkillBase
     {
         if (_isAttacked) return;
 
-        if (other.CompareTag("Boss"))
+        if (other.CompareTag("Boss") || other.CompareTag("monster"))
         {
             AttackEnemy(other);
             SlowEnemy(other);

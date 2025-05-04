@@ -6,6 +6,7 @@ public class ThunderSkill3Controller : SkillController
 {
     private GameObject _fireInstance;
     GameObject prefab;
+    private HashSet<Collider2D> _hittedEnemies = new HashSet<Collider2D>();
 
     public override void Initialize()
     {
@@ -21,6 +22,7 @@ public class ThunderSkill3Controller : SkillController
     protected override void ApplyEffect()
     {
         if (spawnPoint == null || prefab == null) return;
+        _hittedEnemies.Clear();
 
         spawnPoint.y += 1.2f;
 
@@ -35,7 +37,9 @@ public class ThunderSkill3Controller : SkillController
     void SpawnSkill()
     {
         _fireInstance = Instantiate(prefab, spawnPoint, Quaternion.identity);
-        _fireInstance.GetComponent<ThunderSkill3>().SetDamage(playerController.GetDamage());
+        var skill = _fireInstance.GetComponent<ThunderSkill3>();
+        skill.SetDamage(playerController.GetDamage());
+        skill._hittedEnemies = _hittedEnemies;
         if (Dir < 0)
         {
             Vector3 scale = _fireInstance.transform.localScale;

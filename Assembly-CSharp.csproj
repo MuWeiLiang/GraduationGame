@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{32C3BDE6-E125-3128-82C1-25D0441455A3}</ProjectGuid>
+    <ProjectGuid>{40522C83-EEA1-2466-3328-D2D5C6F332D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Level\SLevel\SLevelManager.cs" />
+    <Compile Include="Assets\Script\Level\Menu\LevelMap\TextShow.cs" />
     <Compile Include="Assets\Script\Prop\RandomMover.cs" />
     <Compile Include="Assets\Script\Player\Skill\FireSkills\Fire3Controller.cs" />
     <Compile Include="Assets\Script\Level\Menu\LevelMap\LoadLevel.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\Script\Player\Skill\EarthSkill\EarthSkill2.cs" />
     <Compile Include="Assets\Script\Character\BaseCharacter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\Script\Level\Menu\ElementSelect\ClickSound.cs" />
     <Compile Include="Assets\Script\Player\Skill\ThunderSkills\Thunder2Controller.cs" />
     <Compile Include="Assets\Script\Enemy\MoveEnemy.cs" />
     <Compile Include="Assets\Script\Prop\Potions\YellowPotion.cs" />
@@ -146,6 +148,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\Script\Prop\MagicStone\PositionSliderAboveStone.cs" />
     <Compile Include="Assets\Script\Player\AttackCheck.cs" />
+    <Compile Include="Assets\Script\Level\Menu\ElementSelect\ElementUpdate.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Script\Prop\Broomstick.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -179,7 +182,6 @@
     <Compile Include="Assets\Script\Player\Skill\EarthSkill\Earth1Controller.cs" />
     <Compile Include="Assets\Script\Level\Menu\LevelMap\SaveGameData.cs" />
     <Compile Include="Assets\Script\Prop\Cloak.cs" />
-    <Compile Include="Assets\Script\Level\ScoreManager.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
     <Compile Include="Assets\Script\Player\PlayerStatus.cs" />
     <Compile Include="Assets\Script\Player\Skill\FireSkills\FireSkill1.cs" />
@@ -193,7 +195,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Script\GameData\GameSaveData.cs" />
     <Compile Include="Assets\Script\Level\SLevel\PauseManager.cs" />
-    <Compile Include="Assets\Script\Level\CountdownTimer.cs" />
     <Compile Include="Assets\Script\Prop\Statue.cs" />
     <Compile Include="Assets\Script\Prop\Teleporter.cs" />
     <Compile Include="Assets\Script\Player\Skill\ThunderSkills\Thunder3Controller.cs" />
@@ -206,6 +207,7 @@
     <Compile Include="Assets\Script\Player\Skill\WaterSkills\Water1Controller.cs" />
     <Compile Include="Assets\Script\Player\Skill\EarthSkill\Earth2Controller.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Script\Level\Menu\ElementSelect\ElementSelect.cs" />
     <Compile Include="Assets\Script\Skill\NewSkillSystem.cs" />
     <Compile Include="Assets\Script\Prop\Sword.cs" />
     <Compile Include="Assets\Script\Player\PlayerSkill.cs" />
@@ -231,6 +233,7 @@
     <Compile Include="Assets\Script\Level\SLevel\SLevelData.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\PropertyOrderAttribute.cs" />
     <Compile Include="Assets\Script\Player\Skill\EarthSkill\EarthSkill3.cs" />
+    <Compile Include="Assets\Script\Level\Menu\LevelToggle.cs" />
     <Compile Include="Assets\Script\Player\Skill\WaterSkills\Water2Controller.cs" />
     <Compile Include="Assets\Script\Player\Skill\ThunderSkills\ThunderSkill2.cs" />
     <Compile Include="Assets\Script\Character\PlayerController.cs" />
@@ -262,6 +265,7 @@
     <None Include="Assets\TileMap\TileMap1\Changelog.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Myriad Aesthetics\25 Free Ring Icons\Technical Information.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

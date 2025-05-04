@@ -20,7 +20,7 @@ public class WindSkill3 : SkillBase
     {
         if (_isAttacked) return;
 
-        if (other.CompareTag("Boss"))
+        if (other.CompareTag("Boss") || other.CompareTag("monster"))
         {
             Explode(); // Åö×²µĞÈËÁ¢¼´±¬Õ¨
             AttackEnemy(other);

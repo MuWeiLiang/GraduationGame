@@ -13,6 +13,8 @@ public class EyeEnemy : MoveEnemy
         base.Start(); // 调用基类的 Start 方法
         moveRange = 5f;
         moveSpeed = 3f;
+        //health = 50; // 初始化血量
+        damagePopupSystem = FindObjectOfType<DamagePopupSystem>();
     }
 
     // Update is called once per frame
@@ -33,5 +35,12 @@ public class EyeEnemy : MoveEnemy
                 lastAttackTime = Time.time; // 更新上次攻击时间
             }
         }
+    }
+
+    public override Vector3 GetShowPosition()
+    {
+        Vector3 position = transform.position;
+        position.y += 0.5f;
+        return position;
     }
 }

@@ -34,6 +34,8 @@ public class TorsoEnemy : RandomMove
         StartMove();
         // player = GameObject.FindGameObjectWithTag("Player");
         health = 50; // 血量
+
+        damagePopupSystem = FindObjectOfType<DamagePopupSystem>();
     }
 
     void Update()
@@ -146,6 +148,7 @@ public class TorsoEnemy : RandomMove
     }
     void Hurt()
     {        
+        if(health <= 0) return; // 如果死亡则不执行后续代码
         animator.SetTrigger("hurt");
     }
     public override void Die()

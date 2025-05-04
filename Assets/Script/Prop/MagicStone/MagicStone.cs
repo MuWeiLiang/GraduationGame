@@ -130,6 +130,7 @@ public class MagicStone : MonoBehaviour
             // 实时检测玩家移动和按键状态
             if (HasPlayerMoved(player.transform.position)/* || !Input.GetKey(KeyCode.F)*/)
             {
+                levelManager.ActivePrompt("Player Move! Cancel Collection!");
                 CancelCollection();
                 yield break;
             }

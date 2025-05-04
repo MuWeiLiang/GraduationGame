@@ -19,6 +19,11 @@ public class AchievementItem : MonoBehaviour
         //lockOverlay.SetActive(!isUnlocked);
     }
 
+    public void SetSText()
+    {
+        levelText.text = "S" + levelText.text;
+    }
+
     // 点击显示详细信息
     public void OnClick()
     {

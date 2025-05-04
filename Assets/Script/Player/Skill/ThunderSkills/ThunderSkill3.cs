@@ -5,6 +5,7 @@ using UnityEngine;
 public class ThunderSkill3 : SkillBase
 {
     private bool _isAttacked = false;
+    public HashSet<Collider2D> _hittedEnemies;
 
     void Start()
     {
@@ -20,9 +21,19 @@ public class ThunderSkill3 : SkillBase
     {
         if (_isAttacked) return;
 
-        if (other.CompareTag("Boss"))
+        if (_hittedEnemies != null && _hittedEnemies.Contains(other))
         {
+            //Debug.Log("ThunderSkill3 already hit enemy");
+            return;
+        }
+
+        //Debug.Log("ThunderSkill3 OnTriggerEnter2D : " + other.name);
+        if (other.CompareTag("Boss") || other.CompareTag("monster"))
+        {
+            //Debug.Log("ThunderSkill3 Hit");
+            _hittedEnemies.Add(other);
             AttackEnemy(other);
+
         }
     }
 

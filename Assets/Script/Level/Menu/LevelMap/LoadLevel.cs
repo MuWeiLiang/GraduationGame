@@ -20,8 +20,7 @@ public class LoadLevel : MonoBehaviour
             int levelNumber;
             if (int.TryParse(numberPart, out levelNumber))
             {
-                // 转换成功，levelNumber现在包含数字值
-                // Debug.Log($"关卡号: {levelNumber}");
+
             }
             else
             {
@@ -30,6 +29,28 @@ public class LoadLevel : MonoBehaviour
                 levelNumber = 1; // 设置默认值
             }
             if (loadedData.levelUnlocked[levelNumber - 1])
+            {
+                gameObject.SetActive(true);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+        }
+        if (levelName.StartsWith("SLevel"))
+        {
+            string numberPart = levelName.Substring(6);
+            int levelNumber;
+            if (int.TryParse(numberPart, out levelNumber))
+            {
+            }
+            else
+            {
+                // 转换失败处理
+                Debug.LogError($"无法从'{numberPart}'解析数字");
+                levelNumber = 1; // 设置默认值
+            }
+            if (loadedData.SlevelUnlocked[levelNumber - 1] && loadedData.levelUnlocked[levelNumber*3])
             {
                 gameObject.SetActive(true);
             }

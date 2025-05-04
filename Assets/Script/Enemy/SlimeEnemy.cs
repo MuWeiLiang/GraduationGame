@@ -12,6 +12,7 @@ public class SlimeEnemy : MoveEnemy
     public override void Start()
     {
         base.Start(); // 调用基类的 Start 方法
+        damagePopupSystem = FindObjectOfType<DamagePopupSystem>();
     }
 
     // Update is called once per frame
@@ -48,5 +49,12 @@ public class SlimeEnemy : MoveEnemy
                 }
             }
         }
+    }
+
+    public override Vector3 GetShowPosition()
+    {
+        Vector3 position = transform.position;
+        position.y -= 1f;
+        return position;
     }
 }

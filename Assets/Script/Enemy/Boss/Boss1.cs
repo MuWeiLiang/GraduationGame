@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Boss1 : BaseEnemy
 {
-    private int maxHealth = 300;
+    private int maxHealth = 50;
     private int maxMana = 100;
     public int AttackDamage = 20;
     [Header("移动设置")]
@@ -48,6 +48,8 @@ public class Boss1 : BaseEnemy
         animator = GetComponent<Animator>();
         health = maxHealth; // 设置血量
         mana = maxMana; // 设置蓝量
+
+        damagePopupSystem = FindObjectOfType<DamagePopupSystem>();
     }
 
     void Update()

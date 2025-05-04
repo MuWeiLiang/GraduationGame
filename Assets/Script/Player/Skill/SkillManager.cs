@@ -18,7 +18,14 @@ public class SkillManager : MonoBehaviour
     SkillController[] skills;
     GameObject skillmanager;
     [SerializeField] ElementType elementType = ElementType.Fire; // 默认元素类型
+    private bool isInit = false;
     void Start()
+    {
+        //Init();
+        Invoke("Init", 0.2f);
+    }
+
+    private void Init()
     {
         skills = new SkillController[3];
         skillmanager = new GameObject("SkillManager");
@@ -26,6 +33,7 @@ public class SkillManager : MonoBehaviour
         SelectElementSkill(elementType);
         InitializeSkills();
         SetupSkillUI();
+        isInit = true;
     }
 
     void SelectElementSkill(ElementType elementType)
@@ -90,6 +98,7 @@ public class SkillManager : MonoBehaviour
     }
     void Update()
     {
+        if(!isInit) return;
         HandleInput();
         UpdateSkillUI();
         foreach (SkillController skill in skills) { 

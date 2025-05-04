@@ -5,12 +5,14 @@ using UnityEngine;
 public class Boss2 : BaseEnemy
 {
     //int health = 100; // 血量
-    int maxHealth = 80; // 最大血量
+    int maxHealth = 75; // 最大血量
     //int mana = 100; // 魔法值
     int maxMana = 100; // 最大魔法值
-    [Header("移动设置")]
     [SerializeField] private float moveSpeed = 3f; // 移动速度
     private EnemyAttack enemyAttack;
+
+    private int damage = 20;
+    private float reviveTime = 10f;
 
     private float baseMoveSpeed = 3f; // 基础移动速度
     private float bonusMoveSpeed = 0f; // 额外移动速度
@@ -58,6 +60,7 @@ public class Boss2 : BaseEnemy
     // Update is called once per frame
     void Update()
     {
+        if(!alive) return;
         moveSpeed = baseMoveSpeed + bonusMoveSpeed; // 更新移动速度
         moveSpeed *= (1- speedRatio);
         if (playerTarget == null) return;
@@ -93,7 +96,7 @@ public class Boss2 : BaseEnemy
             {
                 Vector3 spawnPosition = playerTarget.position;
                 spawnPosition.y += 0.5f; // 调整y轴位置
-                ActiveSkill1(spawnPosition, 30);
+                ActiveSkill1(spawnPosition, damage + damage/2);
             }
 
         }
@@ -102,7 +105,7 @@ public class Boss2 : BaseEnemy
         //    if (mana >= 20)
         //    {
         //        Vector3 spawnPosition = playerTarget.position;
-        //        ActiveSkill2(spawnPosition, 20);
+        //        ActiveSkill2(spawnPosition, damage * 2);
         //    }
         //}
     }
@@ -181,7 +184,7 @@ public class Boss2 : BaseEnemy
         magicCooldown = true;
         isMagicing = true;
         int x = Random.Range(1, 3);
-        enemyAttack.damage = 30;
+        enemyAttack.damage = damage + damage/2;
         animator.SetTrigger("magic" + x);
         mana -= 10; // 扣除魔法值
         //Debug.Log("攻击动画");
@@ -195,7 +198,7 @@ public class Boss2 : BaseEnemy
     void ResetIsMagic()
     {
         isMagicing = false;
-        enemyAttack.damage = 20;
+        enemyAttack.damage = damage;
     }
     public void ActiveSkill1(Vector3 spawnPosition, int damage)
     {
@@ -206,7 +209,7 @@ public class Boss2 : BaseEnemy
             fx2Instance.GetComponent<FX>().SetDamage(damage); // 设置伤害值
             skill1Cooldown = true; // 设置技能冷却
             mana -= 15; // 扣除魔法值
-            Invoke("ResetSkill1Cooldown", 10f); // 5秒后重置技能冷却
+            Invoke("ResetSkill1Cooldown", reviveTime); // 5秒后重置技能冷却
 
             Destroy(fx2Instance, 1.5f); // 3秒后自动销毁
         }
@@ -259,5 +262,28 @@ public class Boss2 : BaseEnemy
         postion.x -= 0.35f * dir;
         postion.y += 0.4f;
         return postion;
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        health -= damage;
+        ShowDamage(damage);
+        if (health <= 0)
+        {
+            alive = false;
+            animator.SetTrigger("idle");
+            Invoke("Revive",10f);
+            //Die();
+        }
+        animator.SetTrigger("hurt");
+    }
+    void Revive()
+    {
+        alive = true;
+        maxHealth *= 2;
+        damage *= 2;
+        health = maxHealth;
+        mana = maxMana;
+        reviveTime += 5f;
     }
 }

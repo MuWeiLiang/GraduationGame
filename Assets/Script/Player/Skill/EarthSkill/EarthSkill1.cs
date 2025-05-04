@@ -52,7 +52,7 @@ public class EarthSkill1 : SkillBase
     {
         if (_hasExploded) return;
 
-        if (other.CompareTag("Boss"))
+        if (other.CompareTag("Boss") || other.CompareTag("monster"))
         {
             Explode(); // Åö×²µĞÈËÁ¢¼´±¬Õ¨
             AttackEnemy(other);

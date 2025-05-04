@@ -66,7 +66,10 @@ public class SaveSystem
         {
             currentLevel = 1,
             levelUnlocked = new bool[10],
-            levelGrade = new string[10]
+            levelGrade = new string[10],
+            currentSLevel = 1,
+            SlevelUnlocked = new bool[3],
+            SlevelGrade = new string[3]
         };
         newData.levelUnlocked[0] = true; // 解锁第一关
         newData.levelGrade[0] = "D"; // 默认成绩
