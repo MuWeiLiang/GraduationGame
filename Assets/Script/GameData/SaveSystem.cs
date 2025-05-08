@@ -60,6 +60,19 @@ public class SaveSystem
         }
     }
 
+    public static void DeleteSave()
+    {
+        if (File.Exists(SavePath))
+        {
+            File.Delete(SavePath);
+            Debug.Log("存档已删除");
+        }
+        else
+        {
+            Debug.Log("没有找到存档文件");
+        }
+    }
+
     private static GameSaveData CreateNewSave()
     {
         var newData = new GameSaveData

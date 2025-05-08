@@ -3769,7 +3769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.75
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -4637,6 +4637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelMode: 0
   currentLevel: 0
+  NextLevel: 7
+  NextSLevel: 3
   LevelCoin: 
   LevelGoal: 
   elementType: 0
@@ -7272,8 +7274,7 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 794697844, guid: 904d0b8c28276a64c8101ddedd894d57, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8853461538655865707, guid: 904d0b8c28276a64c8101ddedd894d57, type: 3}

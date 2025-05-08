@@ -22,6 +22,8 @@ public class TorsoEnemy : RandomMove
 
     private bool isDie = false; // 是否死亡
 
+    private SPlayerController playerController; // 状态管理器
+
     void Start()
     {
         // 获取Animator组件
@@ -36,6 +38,8 @@ public class TorsoEnemy : RandomMove
         health = 50; // 血量
 
         damagePopupSystem = FindObjectOfType<DamagePopupSystem>();
+
+        playerController = player.GetComponent<SPlayerController>();
     }
 
     void Update()
@@ -168,6 +172,7 @@ public class TorsoEnemy : RandomMove
         {
             playerInRange = false;
         }
+        if (playerController.IsCloaked()) playerInRange = false;
     }
     public override void TakeDamage(int damage)
     {

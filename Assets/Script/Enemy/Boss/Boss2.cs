@@ -13,6 +13,7 @@ public class Boss2 : BaseEnemy
 
     private int damage = 20;
     private float reviveTime = 10f;
+    int ReviveNum = 2;
 
     private float baseMoveSpeed = 3f; // 基础移动速度
     private float bonusMoveSpeed = 0f; // 额外移动速度
@@ -266,24 +267,40 @@ public class Boss2 : BaseEnemy
 
     public override void TakeDamage(int damage)
     {
+        if(!alive) return;
         health -= damage;
         ShowDamage(damage);
         if (health <= 0)
         {
             alive = false;
             animator.SetTrigger("idle");
-            Invoke("Revive",10f);
-            //Die();
+            if (ReviveNum > 0)
+            {
+                ReviveNum--;
+                Invoke("Revive", reviveTime);
+            }
+            else
+            {
+                Die();
+            }
         }
         animator.SetTrigger("hurt");
     }
     void Revive()
-    {
-        alive = true;
+    {       
         maxHealth *= 2;
         damage *= 2;
         health = maxHealth;
         mana = maxMana;
         reviveTime += 5f;
+        alive = true;
+    }
+
+    public override void Die()
+    {
+        animator.SetTrigger("die");
+        Destroy(gameObject, 1f);
+        rb.velocity = Vector3.zero;
+        rb.isKinematic = true;
     }
 }

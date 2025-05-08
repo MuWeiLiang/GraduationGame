@@ -202,6 +202,7 @@
     <Compile Include="Assets\Script\Player\Skill\EarthSkill\Earth3Controller.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Script\Prop\Statue2.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
     <Compile Include="Assets\Script\Player\Skill\WaterSkills\Water1Controller.cs" />

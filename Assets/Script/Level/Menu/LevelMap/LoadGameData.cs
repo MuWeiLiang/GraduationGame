@@ -33,4 +33,21 @@ public class LoadGameData : MonoBehaviour
         // 使用加载的数据
         Debug.Log($"当前关卡: {loadedData.currentLevel}");
     }
+
+    public void createNewData()
+    {
+        // Debug.Log("Loading level: " + levelName);
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource not found on " + gameObject.name);
+        }
+
+        SaveSystem.DeleteSave();
+        GameSaveData loadedData = SaveSystem.LoadGame();
+    }
 }

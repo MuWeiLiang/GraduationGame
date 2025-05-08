@@ -7,10 +7,15 @@ public class Statue : MonoBehaviour
     private bool playerInRange = false; // 玩家是否在范围内
     public KeyCode pickupKey = KeyCode.F;
     private bool beUsed = false; // 是否在冷却中
+    private SLevelManager levelManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelManager = FindObjectOfType<SLevelManager>();
+        if (levelManager == null)
+        {
+            Debug.LogError("SLevelManager not found!");
+        }
     }
 
     // Update is called once per frame
@@ -39,6 +44,10 @@ public class Statue : MonoBehaviour
         {
             playerInRange = true;
             // 可以在这里显示UI提示，如"按F拾取"
+            if (levelManager != null)
+            {
+                levelManager.ActivePrompt("Press F");
+            }
         }
     }
 

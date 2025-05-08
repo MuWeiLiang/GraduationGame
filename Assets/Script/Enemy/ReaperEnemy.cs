@@ -22,6 +22,8 @@ public class ReaperEnemy : RandomMove
 
     private bool isDie = false; // 是否死亡
 
+    private SPlayerController playerController; // 状态管理器
+
 
     void Start()
     {
@@ -37,6 +39,8 @@ public class ReaperEnemy : RandomMove
         health = 50; // 初始化血量
 
         damagePopupSystem = FindObjectOfType<DamagePopupSystem>();
+
+        playerController = player.GetComponent<SPlayerController>();
     }
 
     void Update()
@@ -202,6 +206,7 @@ public class ReaperEnemy : RandomMove
         {
             playerInRange = false;
         }
+        if (playerController.IsCloaked()) playerInRange = false;
     }
 
     public override void TakeDamage(int damage)

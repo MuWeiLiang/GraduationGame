@@ -279,4 +279,6 @@ public class SPlayerController : MonoBehaviour
         }
         return current.gameObject;
     }
+
+    public void AddDamege(int Num) => playerFight.AddDamage(Num);
 }

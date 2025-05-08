@@ -8,6 +8,7 @@ public class PotionSpawn : MonoBehaviour
     private GameObject potionPrefab; // 当前要生成的药水预制体
     private GameObject potionPrefab1, potionPrefab2; // 药水预制体
     private Transform spawnPoint;    // 药水生成位置（可选）
+    private SLevelManager levelManager;
     public KeyCode pickupKey = KeyCode.F; // 拾取按键
     public float cooldownTime = 15f; // 冷却时间（秒）
 
@@ -24,6 +25,10 @@ public class PotionSpawn : MonoBehaviour
         {
             playerInRange = true;
             // 可以在这里显示UI提示，如"按F拾取"
+            if (levelManager != null)
+            {
+                levelManager.ActivePrompt("Press F");
+            }
         }
     }
 
@@ -46,6 +51,12 @@ public class PotionSpawn : MonoBehaviour
             return;
         }
         spawnPoint = transform.Find("spawnPoint");
+
+        levelManager = FindObjectOfType<SLevelManager>();
+        if (levelManager == null)
+        {
+            Debug.LogError("SLevelManager not found!");
+        }
     }
 
     private void Update()

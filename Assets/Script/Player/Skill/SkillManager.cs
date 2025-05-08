@@ -17,7 +17,7 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private SkillUI[] skillUIs = new SkillUI[3];
     SkillController[] skills;
     GameObject skillmanager;
-    [SerializeField] ElementType elementType = ElementType.Fire; // 默认元素类型
+    ElementType elementType = ElementType.Fire; // 默认元素类型
     private bool isInit = false;
     void Start()
     {
@@ -30,6 +30,7 @@ public class SkillManager : MonoBehaviour
         skills = new SkillController[3];
         skillmanager = new GameObject("SkillManager");
         skillmanager.transform.SetParent(transform, true); // 设置父物体为当前物体
+        elementType = LevelBaseData.Instance.elementType;
         SelectElementSkill(elementType);
         InitializeSkills();
         SetupSkillUI();

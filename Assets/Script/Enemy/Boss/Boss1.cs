@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class Boss1 : BaseEnemy
 {
-    private int maxHealth = 50;
+    private int maxHealth = 150;
     private int maxMana = 100;
     public int AttackDamage = 20;
+    private float reviveTime = 10f;
+    int ReviveNum = 2;
     [Header("移动设置")]
     [SerializeField] private float moveSpeed = 3f; // 移动速度
     [SerializeField] private float stoppingDistance = 2f; // 停止距离
@@ -54,6 +56,7 @@ public class Boss1 : BaseEnemy
 
     void Update()
     {
+        if (!alive) return;
         moveSpeed = baseMoveSpeed + bonusMoveSpeed; // 更新移动速度
         // Debug.Log("moveSpeed: " + moveSpeed);
         if (playerTarget == null) return;
@@ -163,5 +166,48 @@ public class Boss1 : BaseEnemy
     public void UpdateMana(int manaCost)
     {
         mana += manaCost;
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        if(!alive) return;
+        health -= damage;
+        ShowDamage(damage);
+        if (health <= 0)
+        {
+            alive = false;
+            animator.SetTrigger("idle");
+            if(ReviveNum > 0)
+            {
+                ReviveNum--;
+                Invoke("Revive", reviveTime);
+            }
+            else
+            {
+                Die();
+            }
+            //Die();
+        }
+        animator.SetTrigger("hurt");
+    }
+
+    public override void Die()
+    {
+        //base.Die();
+        animator.SetTrigger("die");
+        Destroy(gameObject, 1f);
+        rb.velocity = Vector3.zero;
+        rb.isKinematic = true;
+        // Destroy(gameObject);
+    }
+
+    void Revive()
+    {        
+        maxHealth *= 2;
+        AttackDamage *= 2;
+        health = maxHealth;
+        mana = maxMana;
+        reviveTime += 5f;
+        alive = true;
     }
 }

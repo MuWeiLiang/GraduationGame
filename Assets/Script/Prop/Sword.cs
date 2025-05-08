@@ -21,13 +21,12 @@ public class Sword : MonoBehaviour
     {
         if (other.CompareTag("Player") && !beUsed)
         {
-            FightCharacter playerController = other.GetComponent<FightCharacter>();
+            SPlayerController playerController = other.GetComponent<SPlayerController>();
             beUsed = true;
 
             if (playerController != null)
             {
-                playerController.attackDamage *= 2;
-                playerController.attackRange *= 2;               
+                playerController.AddDamege(10);         
                 // Ïú»ÙµÀ¾ß
                 Destroy(gameObject);
             }

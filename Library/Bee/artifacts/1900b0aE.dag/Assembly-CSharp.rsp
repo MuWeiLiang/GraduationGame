@@ -525,6 +525,7 @@
 "Assets/Script/Prop/rocker.cs"
 "Assets/Script/Prop/rocker2.cs"
 "Assets/Script/Prop/Statue.cs"
+"Assets/Script/Prop/Statue2.cs"
 "Assets/Script/Prop/Sword.cs"
 "Assets/Script/Prop/Teleporter.cs"
 "Assets/Script/Prop/TimeTurner.cs"
