@@ -6428,6 +6428,7 @@ GameObject:
   - component: {fileID: 1270038083}
   - component: {fileID: 1270038082}
   - component: {fileID: 1270038084}
+  - component: {fileID: 1270038085}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -6502,6 +6503,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22268b58b2d1b444ba5b2387d28d2ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1270038085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270038081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906bc509387715c41bf3ec39736358ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
 --- !u!1 &1275003450
 GameObject:
   m_ObjectHideFlags: 0
@@ -13727,7 +13741,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1782637437}
-  - {fileID: 1270038083}
   - {fileID: 1215187164}
   - {fileID: 218488114}
   - {fileID: 1891152743}
@@ -13746,3 +13759,4 @@ SceneRoots:
   - {fileID: 2107627656}
   - {fileID: 212997468}
   - {fileID: 142774092}
+  - {fileID: 1270038083}

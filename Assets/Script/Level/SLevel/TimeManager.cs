@@ -19,7 +19,8 @@ public class TimeManager
         levelMode = LevelBaseData.Instance.LevelMode;
         if (levelMode == 0) initialTime = 180f;
         timeText = timerText;
-        timeRemaining = persistentTimeRemaining >= 0 ? persistentTimeRemaining : initialTime;
+        //timeRemaining = persistentTimeRemaining >= 0 ? persistentTimeRemaining : initialTime;
+        timeRemaining = initialTime;
         UpdateCountdownText();
         IsRunning = true;
     }

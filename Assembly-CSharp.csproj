@@ -130,6 +130,7 @@
     <Compile Include="Assets\Script\Character\FightCharacter.cs" />
     <Compile Include="Assets\Script\Player\Skill\EarthSkill\EarthSkill1.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Script\Camera\CameraBinder.cs" />
     <Compile Include="Assets\Script\Player\Skill\WindSkills\Wind2Controller.cs" />
     <Compile Include="Assets\Script\Player\PlayerBase.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />

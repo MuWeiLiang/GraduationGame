@@ -29,20 +29,48 @@ public class LevelBaseData : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); // 可选：保持对象跨场景
+            SceneManager.sceneLoaded += OnSceneLoaded; // 订阅场景加载事件
         }
         else
         {
             Destroy(gameObject);
         }
 
+        //InitLevelMode();
+        //InitLevelData();
+        //InitEvalutionData();
+
+        //elementType = ElementType.Fire;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "LevelComplete") return;
         InitLevelMode();
         InitLevelData();
         InitEvalutionData();
 
         elementType = ElementType.Fire;
+
+        SetLevel();
+    }
+
+    void OnDestroy()
+    {
+        // 取消订阅，防止内存泄漏
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void Start()
+    {
+        //GameSaveData loadedData = SaveSystem.LoadGame();
+        //NextLevel = loadedData.currentLevel;
+        //NextSLevel = loadedData.currentSLevel;
+        //SetLevel();
+    }
+
+    void SetLevel()
     {
         GameSaveData loadedData = SaveSystem.LoadGame();
         NextLevel = loadedData.currentLevel;
@@ -52,6 +80,7 @@ public class LevelBaseData : MonoBehaviour
     private void InitLevelMode()
     {
         string sceneName = SceneManager.GetActiveScene().name;
+        //Debug.Log("sceneName = " + sceneName);
         bool flag = false;
         if (sceneName[5] >= '0' && sceneName[5] <= '9') flag = true;
         if (sceneName.StartsWith("Level") && flag)
@@ -66,6 +95,7 @@ public class LevelBaseData : MonoBehaviour
         }
         else
             LevelMode = 2;
+        Debug.Log("currentLevel = " + currentLevel);
     }
     private void InitLevelData()
     {

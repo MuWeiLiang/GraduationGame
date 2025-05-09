@@ -19,13 +19,18 @@ public class VirtualCameraBounds : MonoBehaviour
             target = vcam.Follow;
             if (target == null)
             {
-                Debug.LogError("CinemachineVirtualCamera 的 Follow 目标未设置！");
+                Debug.Log("CinemachineVirtualCamera 的 Follow 目标未设置！");
+            }
+            else
+            {
+                Debug.Log("CinemachineVirtualCamera 的 Follow 目标已设置为: " + target.name);
             }
         }
         else
         {
-            Debug.LogError("CinemachineVirtualCamera 组件未找到！");
+            Debug.Log("CinemachineVirtualCamera 组件未找到！");
         }
+        //Debug.Log("LevelBaseData.Instance.currentLevel = " + LevelBaseData.Instance.currentLevel);
         float[] CameraData = LevelBaseData.Instance.LevelMode == 0 ? 
             LevelBaseData.Instance.LevelCamera[LevelBaseData.Instance.currentLevel] : LevelBaseData.Instance.SLevelCamera[LevelBaseData.Instance.currentLevel];
         // 设置相机的移动范围
@@ -33,11 +38,12 @@ public class VirtualCameraBounds : MonoBehaviour
         maxX = CameraData[1]; // 最大 X 轴位置
         minY = CameraData[2];  // 最小 Y 轴位置
         maxY = CameraData[3]; // 最大 Y 轴位置
-        // Debug.Log("相机范围设置为: " + minX + ", " + maxX + ", " + minY + ", " + maxY);
+        Debug.Log("相机范围设置为: " + minX + ", " + maxX + ", " + minY + ", " + maxY);
     }
 
     void LateUpdate()
     {
+        //Debug.Log("!!LevelBaseData.Instance.currentLevel = " + LevelBaseData.Instance.currentLevel);
         if (vcam == null || target == null)
             return;
 

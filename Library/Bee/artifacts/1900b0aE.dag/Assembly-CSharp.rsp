@@ -413,6 +413,7 @@
 "Assets/Cainos/Third Party/Lucid Editor/Runtime/Enum.cs"
 "Assets/Cainos/Third Party/Lucid Editor/Runtime/PropertyGroupAttribute.cs"
 "Assets/Player/Demo/WizDemo1.cs"
+"Assets/Script/Camera/CameraBinder.cs"
 "Assets/Script/Camera/VirtualCameraBounds.cs"
 "Assets/Script/Character/BaseCharacter.cs"
 "Assets/Script/Character/DataController.cs"

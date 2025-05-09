@@ -3,36 +3,8 @@
   "WorkspaceRootPath": "D:\\MyGame\\GraduationGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|d:\\mygame\\graduationgame\\assets\\script\\level\\menu\\achievement\\achievementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\level\\menu\\achievement\\achievementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|d:\\mygame\\graduationgame\\assets\\script\\level\\menu\\elementselect\\elementupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\level\\menu\\elementselect\\elementupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|d:\\mygame\\graduationgame\\assets\\script\\level\\menu\\mainmenu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\level\\menu\\mainmenu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|D:\\MyGame\\GraduationGame\\assets\\script\\enemy\\torsoenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\torsoenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|D:\\MyGame\\GraduationGame\\assets\\script\\enemy\\reaperenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\reaperenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|D:\\MyGame\\GraduationGame\\assets\\player\\demo\\wizdemo1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\demo\\wizdemo1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|D:\\MyGame\\GraduationGame\\assets\\script\\prop\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\prop\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|D:\\MyGame\\GraduationGame\\assets\\script\\player\\splayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\splayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|d:\\mygame\\graduationgame\\assets\\script\\level\\slevel\\slevelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\level\\slevel\\slevelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,106 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ElementUpdate.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\Menu\\ElementSelect\\ElementUpdate.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Level\\Menu\\ElementSelect\\ElementUpdate.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\Menu\\ElementSelect\\ElementUpdate.cs",
-              "RelativeToolTip": "Assets\\Script\\Level\\Menu\\ElementSelect\\ElementUpdate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:41:54.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AchievementManager.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\Menu\\Achievement\\AchievementManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Level\\Menu\\Achievement\\AchievementManager.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\Menu\\Achievement\\AchievementManager.cs",
-              "RelativeToolTip": "Assets\\Script\\Level\\Menu\\Achievement\\AchievementManager.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAiwAIAAAASAAAAAAAAAA==",
+              "Title": "SLevelManager.cs",
+              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
+              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
+              "RelativeToolTip": "Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:41:29.876Z",
+              "WhenOpened": "2025-05-09T07:10:02.136Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\Menu\\MainMenu\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Level\\Menu\\MainMenu\\MainMenu.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\Menu\\MainMenu\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Script\\Level\\Menu\\MainMenu\\MainMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:33:37.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReaperEnemy.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Enemy\\ReaperEnemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\ReaperEnemy.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Enemy\\ReaperEnemy.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\ReaperEnemy.cs",
-              "ViewState": "AgIAAMIAAAAAAAAAAAAmwNAAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:03:37.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TorsoEnemy.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Enemy\\TorsoEnemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\TorsoEnemy.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Enemy\\TorsoEnemy.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\TorsoEnemy.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA2wCkAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:03:19.194Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WizDemo1.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Player\\Demo\\WizDemo1.cs",
-              "RelativeDocumentMoniker": "Assets\\Player\\Demo\\WizDemo1.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Player\\Demo\\WizDemo1.cs",
-              "RelativeToolTip": "Assets\\Player\\Demo\\WizDemo1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T13:57:56.037Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SPlayerController.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Player\\SPlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\SPlayerController.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Player\\SPlayerController.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\SPlayerController.cs",
-              "ViewState": "AgIAAAwBAAAAAAAAAAAIwBoBAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T15:13:46.308Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Sword.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Prop\\Sword.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Prop\\Sword.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Prop\\Sword.cs",
-              "RelativeToolTip": "Assets\\Script\\Prop\\Sword.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T15:13:17.752Z"
             }
           ]
         }
