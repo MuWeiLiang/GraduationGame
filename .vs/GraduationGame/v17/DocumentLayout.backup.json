@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\MyGame\\GraduationGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|d:\\mygame\\graduationgame\\assets\\script\\level\\slevel\\slevelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\level\\slevel\\slevelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|d:\\mygame\\graduationgame\\assets\\script\\level\\levelcomplete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\level\\levelcomplete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|d:\\mygame\\graduationgame\\assets\\script\\level\\levelbasedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40522C83-EEA1-2466-3328-D2D5C6F332D8}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\level\\levelbasedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SLevelManager.cs",
-              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
-              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
-              "RelativeToolTip": "Assets\\Script\\Level\\SLevel\\SLevelManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBsAAAAlAAAAAAAAAA==",
+              "Title": "LevelComplete.cs",
+              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\LevelComplete.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Level\\LevelComplete.cs",
+              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\LevelComplete.cs",
+              "RelativeToolTip": "Assets\\Script\\Level\\LevelComplete.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T07:10:02.136Z",
+              "WhenOpened": "2025-05-09T08:09:26.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LevelBaseData.cs",
+              "DocumentMoniker": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\LevelBaseData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Level\\LevelBaseData.cs",
+              "ToolTip": "D:\\MyGame\\GraduationGame\\Assets\\Script\\Level\\LevelBaseData.cs",
+              "RelativeToolTip": "Assets\\Script\\Level\\LevelBaseData.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAuwDAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T07:42:29.43Z",
               "EditorCaption": ""
             }
           ]
